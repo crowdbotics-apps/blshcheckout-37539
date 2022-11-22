@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+
 
 Route::get('/', function () {
 
@@ -40,6 +40,8 @@ Route::get('/', function () {
     // print_r($shopApi);
     // return view('welcome');
 })->middleware(['verify.shopify'])->name('home');
+
+*/
 
 
 Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
