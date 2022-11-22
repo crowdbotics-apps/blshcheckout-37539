@@ -42,6 +42,8 @@ Route::get('/', function () {
 })->middleware(['verify.shopify'])->name('home');
 
 */
-
+Route::get('/',function () {
+    echo "<h1>asdf</h1>";
+} );
 
 Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
