@@ -259,6 +259,7 @@ return [
 
     'api_deferrer' => env('SHOPIFY_API_DEFERRER', \Osiset\BasicShopifyAPI\Deferrers\Sleep::class),
 
+
     /*
     |--------------------------------------------------------------------------
     | Shopify API Init Function
