@@ -49,7 +49,11 @@ class OrdersCreateJob implements ShouldQueue
      */
     public function handle()
     {
-        info(json_encode($this->data));
+
+        Log::useDailyFiles(storage_path() . '/logs/laravel.log');
+
+        Log::info(json_encode($this->data));
+
 
 
         // Convert domain
