@@ -29,8 +29,8 @@ Route::get('/', function () {
     // $json_data = json_encode($json_data);
 
     $data_to_be_saved = ['carrier_service' => $json_data];
-    $shopApi = $shop->api()->rest('POST', '/admin/api/2022-10/carrier_services.json', $data_to_be_saved, ["Content-Type" => "application/json"]);
-    // $shopApi = $shop->api()->rest('GET', '/admin/api/2022-10/carrier_services.json');
+    // $shopApi = $shop->api()->rest('POST', '/admin/api/2022-10/carrier_services.json', $data_to_be_saved, ["Content-Type" => "application/json"]);
+    $shopApi = $shop->api()->rest('GET', '/admin/api/2022-10/carrier_services.json');
     // $shopApi = $shop->api()->rest('GET', '/admin/api/2022-10/webhooks.json');
 
     echo  json_encode($shopApi);
