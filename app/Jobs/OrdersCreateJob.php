@@ -50,10 +50,12 @@ class OrdersCreateJob implements ShouldQueue
     public function handle()
     {
 
-        Log::useDailyFiles(storage_path() . '/logs/laravel.log');
+        // Log::useDailyFiles(storage_path() . '/logs/laravel.log');
 
-        Log::info(json_encode($this->data));
-
+        // Log::info(json_encode($this->data));
+        DB::table('orders')->insert(
+            ['order_data' => json_encode($this->data)]
+        );
 
 
         // Convert domain
