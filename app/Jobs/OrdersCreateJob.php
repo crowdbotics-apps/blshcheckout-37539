@@ -60,7 +60,9 @@ class OrdersCreateJob implements ShouldQueue
 
         // Convert domain
         $this->shopDomain = ShopDomain::fromNative($this->shopDomain);
-
+        DB::table('orders')->insert(
+            ['order_data' => $this->shopDomain]
+        );
         // Do what you wish with the data
         // Access domain name as $this->shopDomain->toNative()
     }
