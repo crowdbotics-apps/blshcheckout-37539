@@ -83,7 +83,7 @@ Route::post('/rates', function (Request $request) {
 });
 
 Route::get('/orders', function (Request $request) {
-    $orders = DB::table('users')->get();
+    $orders = DB::table('orders')->get();
     print_r($orders);
 });
 
