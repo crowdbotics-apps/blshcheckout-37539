@@ -82,5 +82,10 @@ Route::post('/rates', function (Request $request) {
     print $json_output;
 });
 
+Route::get('/orders', function (Request $request) {
+    $orders = DB::table('users')->get();
+    print_r($orders);
+});
+
 Route::post('/webhook-orders-create', function (Request $request) {
 });
