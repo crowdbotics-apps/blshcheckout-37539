@@ -354,7 +354,7 @@ return [
         */
         [
             'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'ORDERS_CREATE'),
-            'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://blshcheckout-37539.botics.co/webhook/webhook-orders-create')
+            'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://blshcheckout-37539.botics.co/webhook/orders-create')
         ],
         [
             'topic' => env('SHOPIFY_WEBHOOK_2_TOPIC', 'THEMES_PUBLISH'),
